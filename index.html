@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Home | Kingsbuild</title>
+	
+	<meta name="title" content="Home | Kingsbuild">
+	<meta name="description" content="Kingsbuild Studios is a small indie entertainment studios working towards enhancing the entertainment industry">
+	<meta name="keywords" content="Kingsbuild">
+	<meta name="author" content="Kingsbuild Studios">
+	<meta name="url" content="http://www.kingsbuild.online/">
+	<meta name="image" content="#">
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+
+<body>
+<div class="heading">
+	<div class="font">
+		<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a class="active" href="news.html">News</a>
+    <a href="games.html">Games</a>
+    <a href="community.html">Community</a>
+    <a href="mods.html">Mods</a>
+	<a href="forum.html">Forum</a>
+    <a href="careers.html">Careers</a>
+    <a href="company.html">Company</a>
+    <a href="shop.html">Store</a>
+	</div>
+    <div id="main">
+  <span style="font-size:40px;cursor:pointer;color:white" onclick="openNav()">&#9776; KINGSBUILD</span>
+</div>
+
+<div class="header">
+<a href="#" class="boxbutton">LOGIN / SIGNUP</a>
+		</div>
+	</div>
+</div>
+
+<div class="slideshow" style="max-width:500px">
+  <img class="mySlides" src="conceptart.jpg" style="width:100%">
+  <img class="mySlides" src="img_ny.jpg" style="width:100%">
+  <img class="mySlides" src="conceptart.jpg" style="width:100%">
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 10000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
